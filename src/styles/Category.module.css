@@ -1,0 +1,18 @@
+.category__card:nth-child(odd) {
+    border: 2px solid red;
+    flex-flow: row-reverse;
+}
+
+.category__image {
+    width: 40%;
+}
+
+
+.category__info {
+    width: 60%;
+}
+
+.menu-day {
+    font-family: var(--secundary-font);
+    font-size: 7rem;
+}

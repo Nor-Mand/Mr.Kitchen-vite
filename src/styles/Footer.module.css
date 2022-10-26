@@ -1,0 +1,12 @@
+.footer p{
+    font-size: 1.5rem;
+}
+
+
+.footer svg {
+    font-size: 2rem;
+}
+
+.footer a {
+    color: var(--text-color-primary);
+}

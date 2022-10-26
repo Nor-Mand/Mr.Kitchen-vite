@@ -1,0 +1,27 @@
+.story__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.story__card:nth-child(odd) {
+    flex-flow: row-reverse;
+    box-shadow: 0px 2px 60px 0px rgb(0 0 0 / 10%);
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+.story__image {
+    width: 40%;
+}
+
+.story__info {
+    width: 60%;
+}
+
+.story__info h1{
+    font-size: 3.5rem;
+}
+
+.story__info p {
+    font-size: 1.5rem;
+}
