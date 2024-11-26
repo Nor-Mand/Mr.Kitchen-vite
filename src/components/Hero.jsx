@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
       <div className={style["hero__title"]}>
         <h1>Fetch API: The Meal DB</h1>
-        <h2>Working with Next.js</h2>
+        <h2>Working with Vite.js</h2>
       </div>
     </main>
   );

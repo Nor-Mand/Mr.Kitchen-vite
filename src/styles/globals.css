@@ -61,16 +61,41 @@ nav {
 main{
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 500px;
     overflow: hidden;
 }
 
 section {
     position: relative;
     margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 a {
     list-style: none !important;
     text-decoration: none !important;
+}
+
+.nav-link .menu {
+    color: red;
+}
+
+.btn-meal{
+    background: #C84A24 !important;
+    color: #ffffff !important;
+    transition: 0.4s;
+    padding: 5px 30px !important;
+}
+.btn-meal:hover{
+    background: #ffffff !important;
+    color: #303841 !important;
+    border: 1px solid #C84A24 !important;
+}
+.img-modal{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+h5{
+    line-height: 1.5 !important;
 }

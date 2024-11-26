@@ -10,6 +10,9 @@
     border-radius: 10px;
 }
 
+.story__card:nth-child(even) {
+    padding: 3rem;
+}
 .story__image {
     width: 40%;
 }

@@ -18,9 +18,10 @@ const MealProvider = ({ children }) => {
       console.log(error.message);
     }
   };
-  const getMeal = async (datos) => {
+  const getMeal = async (search) => {
     try {
-      const url = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${datos.meal}&c=${datos.category}`;
+      const url = !search ? `https://www.themealdb.com/api/json/v1/1/filter.php?i=pie&c=Dessert` :
+      `https://www.themealdb.com/api/json/v1/1/filter.php?i=${search.meal}&c=${search.category}`
       const { data } = await axios(url);
       setMeals(data.meals);
     } catch (error) {

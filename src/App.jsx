@@ -5,6 +5,7 @@ import ShowRecipes from "./components/ShowRecipes";
 import Layout from "./components/Layout";
 import { Helmet } from "react-helmet";
 import Favicon from "./images/favicon.ico";
+import ModalProvider from "./store/providers/ModalContext";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         <title>Mr. Kitchen | API consumer</title>
         <link rel="icon" type="image/png" href={Favicon} sizes="16x16" />
       </Helmet>
-      <MealProvider>
+      <ModalProvider>
+        <MealProvider>
         <Layout>
           <Hero />
           <section>
@@ -27,7 +29,8 @@ function App() {
             </Container>
           </section>
         </Layout>
-      </MealProvider>
+        </MealProvider>
+      </ModalProvider>
     </>
   );
 }

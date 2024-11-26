@@ -6,12 +6,15 @@ import Banner from "../images/banner-story.jpg";
 import { MealProvider } from "../store/providers/MealProvider";
 import FormData from "../components/FormData";
 import Layout from "../components/Layout";
+import ShowRecipes from "../components/ShowRecipes";
+import ModalProvider from "../store/providers/ModalContext";
 const Recipe = () => {
   return (
     <MealProvider>
+      <ModalProvider>
       <Layout>
         <BannerSection banner={Banner} title={"Recipes"} />
-        <section>
+        <section id="recipes">
           <Container>
             <Row className="justify-content-md-center">
               <Col lg={6} className="mb-5">
@@ -27,6 +30,7 @@ const Recipe = () => {
           </Container>
         </section>
       </Layout>
+      </ModalProvider>
     </MealProvider>
   );
 };

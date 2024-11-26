@@ -8,8 +8,7 @@ const FormData = () => {
   const { categories, getMeal } = useCategory();
 
   const [search, setSearch] = useState({
-    meal: "",
-    category: "",
+    category: "Dessert",
   });
 
   const [alert, setAlert] = useState("");
@@ -27,7 +26,7 @@ const FormData = () => {
     <Form onSubmit={handleSubmit}>
       {alert && <Alert variant="danger text-center">{alert}</Alert>}
       <Row>
-        <Col md={6}>
+        {/* <Col md={6}>
           <Form.Group className="mt-3">
             <Form.Control
               id="meal"
@@ -43,8 +42,8 @@ const FormData = () => {
               }
             ></Form.Control>
           </Form.Group>
-        </Col>
-        <Col md={4}>
+        </Col> */}
+        <Col md={8}>
           <Form.Group className="mt-3">
             <Form.Select
               id="category"
@@ -57,7 +56,6 @@ const FormData = () => {
                 })
               }
             >
-              <option>- Choose Category -</option>
               {categories.map((category) => (
                 <option key={category.strCategory} value={category.strCategory}>
                   {category.strCategory}
@@ -66,11 +64,11 @@ const FormData = () => {
             </Form.Select>
           </Form.Group>
         </Col>
-        <Col md={2}>
+        <Col md={4}>
           <Form.Group className="mt-3">
             <Button
               variant="primary"
-              className="text-uppercase w-100"
+              className="text-uppercase w-100 btn-meal"
               type="submit"
             >
               Search

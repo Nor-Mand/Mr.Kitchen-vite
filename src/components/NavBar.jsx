@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import logo from "../images/logo-white.png";
 import { Navbar, Container, Nav, Offcanvas } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import style from "../styles/NavBar.module.css"
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,16 +41,16 @@ const NavBar = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Link to="/" className="nav-link">
+                  <Link to="/" className="nav-link menu">
                     Home
                   </Link>
 
-                  <Link to="/recipe" className="nav-link">
-                    Recipes
-                  </Link>
-
-                  <Link to="/story" className="nav-link">
+                  <Link to="/story" className="nav-link menu">
                     Story
+                  </Link>
+                  
+                  <Link to="/recipe" className={`nav-link ${style.menu}`}>
+                    Recipes
                   </Link>
                 </Nav>
               </Offcanvas.Body>

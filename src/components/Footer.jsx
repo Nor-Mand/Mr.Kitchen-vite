@@ -3,6 +3,8 @@ import isotipo from "../images/isotipo.png";
 import style from "../styles/Footer.module.css";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
+const year = new Date()
+
 const links = [
   {
     id: 1,
@@ -16,12 +18,12 @@ const links = [
     icon: <FaLinkedin />,
     url: "https://www.linkedin.com/in/normand-terceros-laredo-923271169",
   },
-  {
-    id: 3,
-    name: "Instagram",
-    icon: <FaInstagram />,
-    url: "https://www.instagram.com/normand_creative",
-  },
+  // {
+  //   id: 3,
+  //   name: "Instagram",
+  //   icon: <FaInstagram />,
+  //   url: "https://www.instagram.com/normand_creative",
+  // },
 ];
 
 const Footer = () => {
@@ -29,10 +31,6 @@ const Footer = () => {
     <>
       <div className={`container-fluid bg-dark ${style.footer}`}>
         <footer className="d-flex flex-wrap justify-content-evenly align-items-center py-2 my-4 border-top">
-          <p className="col-md-4 mb-0 text-muted">
-            © <a href="https://normand.dev/"> Normand Dev</a> - 2022
-          </p>
-
           <a
             href="/"
             className="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"
@@ -46,6 +44,9 @@ const Footer = () => {
               />
             </div>
           </a>
+          <p className="col-md-4 mb-0 text-muted text-center">
+            ©{year.getFullYear()} <span>&nbsp;</span> <a href="https://normand.dev/"> Normand Dev</a> 
+          </p>
           <ul className="nav col-md-4 justify-content-end">
             {links.map(({ id, name, url, icon }, i) => (
               <li key={i} className="nav-item">
